@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LiveRoomItemFragment">
+
+    <Button
+        android:id="@+id/btnChangeMutableLiveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MutableLiveData（会发生数据倒灌）"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnChangeBusLiveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BusLiveData（不会数据倒灌）"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChangeMutableLiveData" />
+
+    <Button
+        android:id="@+id/btnChangeUnPeekLiveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UnPeekLiveData（不会数据倒灌）"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChangeBusLiveData" />
+
+    <Button
+        android:id="@+id/btnChangeEventLiveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EventLiveData（不会数据倒灌）"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChangeUnPeekLiveData" />
+
+    <com.xuexiang.xui.widget.textview.LoggerTextView
+        android:id="@+id/loggerTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChangeEventLiveData" />
+</androidx.constraintlayout.widget.ConstraintLayout>
